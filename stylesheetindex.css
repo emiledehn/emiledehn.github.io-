@@ -25,3 +25,12 @@ body {
     width: 1280px;
     height: 700px;
 }
+
+.tool {
+    background-color: rgb(255, 255, 255);
+    width: 640px;
+    height: 50px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
