@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(1, 1, 1);
+    background-color: rgb(255, 255, 255);
 }
 
 #container { position: relative; }
@@ -7,8 +7,8 @@ body {
 
 .container {
     background-color: rgb(230, 230, 230);
-    width: 600px;
-    height: 420px;
+    width: 1280px;
+    height: 800px;
     margin-left: auto;
     margin-right: auto;
 }
