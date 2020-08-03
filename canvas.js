@@ -23,6 +23,15 @@ function checkKeyPress(e) {
         context.strokeStyle = color;
         context.stroke();
     }
+    if (e.keyCode == "66") {
+        var x = Math.random() * window.innerWidth;
+        var y = Math.random() * window.innerHeight;
+        var color = random_rgba();
+        context.beginPath();
+        context.arc(x,y,50,0,Math.PI * 2,false);
+        context.strokeStyle = color;
+        context.stroke();
+    }
 }
 
 
