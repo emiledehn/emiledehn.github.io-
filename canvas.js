@@ -26,9 +26,10 @@ function checkKeyPress(e) {
     if (e.keyCode == "66") {
         var x = Math.random() * window.innerWidth;
         var y = Math.random() * window.innerHeight;
+        var z = Math.random() * 100;
         var color = random_rgba();
         context.beginPath();
-        context.arc(x,y,50,0,Math.PI * 2,false);
+        context.arc(x,y,z,0,Math.PI * 2,false);
         context.strokeStyle = color;
         context.stroke();
     }
