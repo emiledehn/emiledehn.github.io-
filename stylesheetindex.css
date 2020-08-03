@@ -1,27 +1,27 @@
 body {
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(230, 230, 230);
 }
 
 #container { position: relative; }
 #imageView { border: 1px solid #000; }
 
 .container {
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(0, 255, 0);
     width: 1280px;
     height: 800px;
     margin-left: auto;
     margin-right: auto;
 }
 .sidebar {
-    background-color: rgb(184, 184, 184);
+    background-color: rgb(245, 245, 245);
     float: left;
-    width: 200px;
-    height: 800px;
+    width: 1280px;
+    height: 100px;
 }
 
 .main {
     background-color: rgb(255, 255, 255);
     float: right;
-    width: 1080px;
-    height: 800px;
+    width: 1280px;
+    height: 700px;
 }
