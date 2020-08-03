@@ -6,7 +6,7 @@ body {
 #imageView { border: 1px solid #000; }
 
 .container {
-    background-color: wheat;
+    background-color: rgb(230, 230, 230);
     width: 600px;
     height: 420px;
     margin-left: auto;
