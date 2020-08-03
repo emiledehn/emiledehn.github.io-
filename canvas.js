@@ -9,6 +9,27 @@ canvas.height = window.innerHeight;
 //e.g. context.fillRect();
 var context = canvas.getContext('2d');
 
+//keyup,keypress
+window.addEventListener("keydown", checkKeyPress, false);
+
+function checkKeyPress(e) {
+    if (e.keyCode == "65") {
+        var x = Math.random() * window.innerWidth;
+        var y = Math.random() * window.innerHeight;
+        var color = random_rgba();
+        context.beginPath();
+        context.arc(x,y,50,0,Math.PI * 2,false);
+        context.strokeStyle = color;
+        context.stroke();
+    }
+}
+
+
+
+
+
+
+
 //rectangle
 //context.fillStyle = 'rgba(255,0,0,0.1)';
 //context.fillRect(100, 100, 200, 200);
@@ -28,7 +49,7 @@ function random_rgba() {
     return 'rgba(' + o(r()*s) + ',' + o(r()*s) + ',' + o(r()*s) + ',' + r().toFixed(1) + ')';
 }
 
-for (var i = 0; i<999; i++) {
+/*for (var i = 0; i<999; i++) {
     var x = Math.random() * window.innerWidth;
     var y = Math.random() * window.innerHeight;
     var color = random_rgba();
@@ -37,7 +58,7 @@ for (var i = 0; i<999; i++) {
     context.strokeStyle = color;
     context.stroke();
 }
-
+*/
 
 /*context.beginPath();
 context.moveTo(window.innerWidth/2,window.innerHeight/2);
