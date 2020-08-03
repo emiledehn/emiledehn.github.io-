@@ -2,6 +2,8 @@
 //looks for html object called canvas
 var canvas = document.querySelector('canvas');
 
+var mousePressed = false;
+
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
@@ -11,6 +13,21 @@ var context = canvas.getContext('2d');
 
 //keyup,keypress
 window.addEventListener("keydown", checkKeyPress, false);
+window.addEventListener("mousemove", checkMousePos);
+window.addEventListener("mousedown", checkMousePress);
+
+function checkMousePress(e) {
+    
+}
+
+function checkMousePos(e) {
+    var z = Math.random() * 100;
+    var color = random_rgba();
+    context.beginPath();
+    context.arc(e.x,e.y,z,0,Math.PI * 2,false);
+    context.strokeStyle = color;
+    context.stroke();
+}
 
 function checkKeyPress(e) {
     context.beginPath();
@@ -20,6 +37,14 @@ function checkKeyPress(e) {
         var y = Math.random() * window.innerHeight;
         var color = random_rgba();
         context.lineTo(x,y);
+        context.strokeStyle = color;
+        context.stroke();
+        var x = Math.random() * window.innerWidth;
+        var y = Math.random() * window.innerHeight;
+        var z = Math.random() * 100;
+        var color = random_rgba();
+        context.beginPath();
+        context.arc(x,y,z,0,Math.PI * 2,false);
         context.strokeStyle = color;
         context.stroke();
     }
