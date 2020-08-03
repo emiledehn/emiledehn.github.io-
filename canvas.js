@@ -17,16 +17,16 @@ window.addEventListener("mousemove", checkMousePos);
 window.addEventListener("mousedown", checkMousePress);
 
 function checkMousePress(e) {
-    
-}
-
-function checkMousePos(e) {
     var z = Math.random() * 100;
     var color = random_rgba();
     context.beginPath();
     context.arc(e.x,e.y,z,0,Math.PI * 2,false);
     context.strokeStyle = color;
     context.stroke();
+}
+
+function checkMousePos(e) {
+    
 }
 
 function checkKeyPress(e) {
