@@ -13,12 +13,13 @@ var context = canvas.getContext('2d');
 window.addEventListener("keydown", checkKeyPress, false);
 
 function checkKeyPress(e) {
+    context.beginPath();
+    context.moveTo(window.innerWidth/2,window.innerHeight/2);
     if (e.keyCode == "65") {
         var x = Math.random() * window.innerWidth;
         var y = Math.random() * window.innerHeight;
         var color = random_rgba();
-        context.beginPath();
-        context.arc(x,y,50,0,Math.PI * 2,false);
+        context.lineTo(x,y);
         context.strokeStyle = color;
         context.stroke();
     }
