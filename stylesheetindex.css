@@ -6,22 +6,22 @@ body {
 #imageView { border: 1px solid #000; }
 
 .container {
-    background-color: rgb(190, 200, 200);
+    background-color: rgb(255, 255, 255);
     width: 1280px;
     height: 800px;
     margin-left: auto;
     margin-right: auto;
 }
 .sidebar {
-    background-color: rgb(250, 0, 0);
+    background-color: rgb(184, 184, 184);
     float: left;
-    width: 100px;
-    height: 420px;
+    width: 200px;
+    height: 800px;
 }
 
 .main {
     background-color: rgb(255, 255, 255);
     float: right;
-    width: 500px;
-    height: 420px;
+    width: 1080px;
+    height: 800px;
 }
