@@ -13,8 +13,8 @@ var context = canvas.getContext('2d');
 
 //keyup,keypress
 window.addEventListener("keydown", checkKeyPress, false);
-window.addEventListener("mousemove", checkMousePos);
-window.addEventListener("mousedown", checkMousePress);
+window.addEventListener("mousemove", checkMousePos, false);
+window.addEventListener("mousedown", checkMousePress, false);
 
 function checkMousePress(e) {
     var z = Math.random() * 100;
