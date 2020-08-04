@@ -3,7 +3,6 @@ var canvas = document.querySelector('myCanvas');
 //display size
 myCanvas.style.width = "100%";
 myCanvas.style.height = "100%";
-console.log(myCanvas.style.width);
 
 //resulution
 // default is 300x150 px
