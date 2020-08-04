@@ -1,8 +1,18 @@
 //puts html object in javascript variable
 //looks for html object called canvas
-var canvas = document.querySelector('canvas');
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+
+fitToContainer(canvas);
+
+function fitToContainer(canvas){
+  // Make it visually fill the positioned parent
+  canvas.style.width ='100%';
+  canvas.style.height='100%';
+  // ...then set the internal size to match
+  canvas.width  = canvas.offsetWidth;
+  canvas.height = canvas.offsetHeight;
+}
+
+
 
 //makes use of lots of drawing functions possible
 //e.g. context.fillRect();
@@ -11,11 +21,11 @@ var context = canvas.getContext('2d');
 //keyup,keypress
 
 window.addEventListener("resize", function(e) {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-
+    canvas.width  = canvas.offsetWidth;
+    canvas.height = canvas.offsetHeight;
     init();
 })
+
 window.addEventListener("keydown", checkKeyPress, false);
 window.addEventListener("mousemove", mouseMove, false);
 window.addEventListener("mousedown", checkMousePress, false);
@@ -38,6 +48,9 @@ var mouse = {
 }
 
 function mouseMove(e) {
+    context.fillStyle = 'rgba(255,0,0,0.1)';
+    context.fillRect(e.x -25, e.y-25, 5, 5);
+    console.log(e);
     mouse.x=e.x;
     mouse.y=e.y;
 }
@@ -109,7 +122,7 @@ function Circle(x,y,dx,dy,radius,color) {
 
 var circleArray = [];
 function init() {
-    circleArray=[];
+    /*circleArray=[];
     for(var i=0; i<500; i++) {
         var color = random_rgba();
         var radius = Math.random() * 20 + 3;
@@ -119,6 +132,7 @@ function init() {
         var dx = (Math.random() - 0.5) * 7;
         circleArray.push(new Circle(x, y, dx, dy, radius, color));
     }
+    */
 }
 
 function animate() {
@@ -129,9 +143,8 @@ function animate() {
     }
 }
 
-init();
-
-animate();
+//init();
+//animate();
 
 
 /*
