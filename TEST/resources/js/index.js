@@ -23,7 +23,7 @@ function movingCircle(x,y,radius,dx,dy,color) {
 
 	this.draw = function() {
 		this.circle = new Path.Circle(this.x,this.y,this.radius);
-		this.circle.fillColor = "red";
+		this.circle.fillColor = color;
 	}
 	this.update = function() {
 		if(this.circle.position.x+this.radius>paper.view.bounds.width || this.circle.position.x-radius<0) {
@@ -33,19 +33,18 @@ function movingCircle(x,y,radius,dx,dy,color) {
             this.dy = -this.dy;
         }
         this.circle.position.x+=this.dx;
-		this.circle.position.y+=this.dy;
+        this.circle.position.y+=this.dy;
+        this.circle.fillColor.hue -= 3;
 		
 		
         var distance = 100;
         if(mouse.x - this.circle.position.x < distance && mouse.x -this.circle.position.x > -distance && mouse.y - this.circle.position.y < distance && mouse.y - this.circle.position.y > -distance) {
 			if(this.circle.bounds.width/2 < radius*5){
 				this.circle.scale(2);
-				this.circle.fillColor.hue += 5;
             } 
 		} else if(this.circle.bounds.width/2 > radius) {
 			this.circle.scale(0.95);
-			this.circle.fillColor.hue -= 5;
-		}
+        }
 	}
 }
 
