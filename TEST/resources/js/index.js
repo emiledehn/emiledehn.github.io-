@@ -9,7 +9,11 @@ function onMouseDown(event) {
 
 function onMouseMove(event) {
 	mouse.x = event.point.x;
-	mouse.y = event.point.y;
+    mouse.y = event.point.y;
+    if(event.point.x>view.bounds.width-25||event.point.x<25||event.point.y>view.bounds.height-25||event.point.y<25) {
+        mouse.x = undefined;
+        mouse.y = undefined;
+    } 
 }
 
 function movingCircle(x,y,radius,dx,dy,color) {
